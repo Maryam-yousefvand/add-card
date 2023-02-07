@@ -1,10 +1,12 @@
-import { addCard, listCards } from "features/auth/authSlice";
-import React, { useEffect } from "react";
+import { addCard, listCards, removeCard } from "features/auth/authSlice";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 export const ListCards = () => {
   const listCard = useSelector((state) => state.auth.listCards);
   console.log(listCard);
+
+  const [showRemoveCard, setShowRemoveCard] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -36,10 +38,40 @@ export const ListCards = () => {
                 <div className="w-[19%]">{card?.exp}</div>
                 <div className="w-[19%]">{card?.cv2}</div>
                 <div className="w-[19%]  ">
-                  <div className="flex w-28 justify-center py-2 bg-red-500 cursor-pointer shadow-md ">
+                  <div
+                    className="flex w-28 justify-center py-2 bg-red-500 cursor-pointer shadow-md "
+                    onClick={() => setShowRemoveCard(!showRemoveCard)}
+                  >
                     حذف
                   </div>
                 </div>
+
+                {showRemoveCard ? (
+                  <div className="w-full h-full top-0 right-0 bg-black   absolute flex justify-center items-center ">
+                    <div className="w-[350px] h-[150px] border bg-white  ">
+                      <p className="py-7">آیا از حذف کارت مطمئنید؟</p>
+                      <div className="flex justify-evenly">
+                        <div
+                          className="bg-green-500 w-[40%] py-2 flex justify-center cursor-pointer"
+                          onClick={() => {
+                            dispatch(removeCard(index));
+                            setShowRemoveCard(!showRemoveCard);
+                          }}
+                        >
+                          بله
+                        </div>
+                        <div
+                          className="bg-red-500 w-[40%] py-2 flex justify-center  cursor-pointer"
+                          onClick={() => {
+                            setShowRemoveCard(!showRemoveCard);
+                          }}
+                        >
+                          خیر
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : null}
               </li>
             ))}
         </ul>

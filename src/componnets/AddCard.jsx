@@ -3,6 +3,8 @@ import { Field, Form, Formik } from "formik";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import Select from "react-select";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AddCard = () => {
   const [selectOption, setSelectOption] = useState();
@@ -23,11 +25,17 @@ const AddCard = () => {
             exp: "",
             cv2: "",
           }}
-          // validationSchema={loginSchema}
-          onSubmit={async (values) => {
+          enableReinitialize={true}
+          onSubmit={async (values, { resetForm }) => {
             values.name = selectOption;
             console.log(values);
             dispatch(addCard(values));
+            toast.success("کارت با موفقیت ثبت شد", {
+              style: {
+                fontFamily: "vazir",
+              },
+            });
+            resetForm();
           }}
         >
           <Form>

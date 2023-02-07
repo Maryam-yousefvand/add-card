@@ -31,6 +31,9 @@ export const authSlice = createSlice({
 
       state.listCards = [...state.listCards, action.payload]
 
+    },
+    removeCard(state, action) {
+      state.listCards = state.listCards.filter((card, index) => index !== action.payload)
     }
 
 
@@ -43,4 +46,4 @@ export const authSlice = createSlice({
 });
 
 export default authSlice.reducer;
-export const { login, logout, addCard } = authSlice.actions
+export const { login, logout, addCard, removeCard } = authSlice.actions

@@ -9,7 +9,7 @@ const Home = () => {
   const user = useSelector((state) => state.auth.user);
   console.log(user);
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen relative">
       <div className="w-[15%] flex flex-col border py-14">
         <div className="py-10 flex justify-center items-center">{user}</div>
         <NavLink

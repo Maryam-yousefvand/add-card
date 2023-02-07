@@ -6,10 +6,13 @@ import Home from './componnets/Home';
 import NotFound from './componnets/NotFound';
 import { ListCards } from 'componnets/ListCards';
 import AddCard from 'componnets/AddCard';
+import { ToastContainer } from 'react-toastify';
+
 
 function App() {
   return (
     <div className="App">
+      <ToastContainer />
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Login />}></Route>
