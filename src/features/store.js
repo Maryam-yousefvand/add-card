@@ -1,5 +1,7 @@
+
 import { configureStore } from "@reduxjs/toolkit";
 import authReducer from "features/auth/authSlice";
+import cardReducer from 'features/card/cardSlice'
 
 import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore } from 'redux-persist';
@@ -14,6 +16,7 @@ const persistedReducer = persistReducer(persistConfig, authReducer)
 export const store = configureStore({
   reducer: {
     auth: persistedReducer,
+    card: cardReducer,
     middleware: [thunk]
   },
 });

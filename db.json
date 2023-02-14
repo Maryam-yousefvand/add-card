@@ -1,0 +1,119 @@
+{
+  "users": [
+    {
+      "email": "test@email.com",
+      "password": "$2a$10$aO/HY8DBDRbBUw3K9qwq8uhQtuLDcE9Gw3CI6yjIE5Fyc0A8sm9N6",
+      "first_name": "test",
+      "last_name": "test",
+      "id": 1
+    },
+    {
+      "email": "test1@email.com",
+      "password": "$2a$10$Nr9MI0I9RGvrpIt/9c9V9OxTQKIWwIazayTG7ViPEzgjuDFUMmIeW",
+      "first_name": "test2",
+      "last_name": "test2",
+      "id": 2
+    }
+  ],
+  "addCard": [
+    {
+      "bankName": "ملی",
+      "number1": "4589",
+      "number2": "8952",
+      "number3": "3256",
+      "number4": "1258",
+      "exp_year": "1402",
+      "exp_month": "02",
+      "cvv2": "111",
+      "id": 1
+    },
+    {
+      "bankName": "ملی",
+      "number1": "1258",
+      "number2": "1478",
+      "number3": "3256",
+      "number4": "7896",
+      "exp_year": "1408",
+      "exp_month": "08",
+      "cvv2": "236",
+      "id": 3
+    },
+    {
+      "bankName": "صادرات",
+      "number1": "3658",
+      "number2": "4741",
+      "number3": "2569",
+      "number4": "5871",
+      "exp_year": "1404",
+      "exp_month": "02",
+      "cvv2": "569",
+      "id": 4
+    },
+    {
+      "bankName": "ملی",
+      "number1": "7851",
+      "number2": "1473",
+      "number3": "1023",
+      "number4": "0257",
+      "exp_year": "1405",
+      "exp_month": "02",
+      "cvv2": "258",
+      "id": 5
+    },
+    {
+      "bankName": "صادرات",
+      "number1": "4577",
+      "number2": "4128",
+      "number3": "2147",
+      "number4": "7777",
+      "exp_year": "1403",
+      "exp_month": "02",
+      "cvv2": "145",
+      "id": 6
+    },
+    {
+      "bankName": "تجارت",
+      "number1": "1234",
+      "number2": "4344",
+      "number3": "2589",
+      "number4": "4444",
+      "exp_year": "1401",
+      "exp_month": "02",
+      "cvv2": "647",
+      "id": 7
+    },
+    {
+      "bankName": "تجارت",
+      "number1": "1111",
+      "number2": "2222",
+      "number3": "3333",
+      "number4": "4444",
+      "exp_year": "1403",
+      "exp_month": "06",
+      "cvv2": "123",
+      "id": 9
+    },
+    {
+      "bankName": "صادرات",
+      "number1": "8562",
+      "number2": "1400",
+      "number3": "2036",
+      "number4": "2014",
+      "exp_year": "1407",
+      "exp_month": "10",
+      "cvv2": "321",
+      "id": 10
+    },
+    {
+      "bankName": "ملی",
+      "number1": "5210",
+      "number2": "2589",
+      "number3": "3600",
+      "number4": "1258",
+      "exp_year": "1401",
+      "exp_month": "12",
+      "cvv2": "443",
+      "id": 11
+    }
+  ]
+}

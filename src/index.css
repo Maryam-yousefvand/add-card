@@ -2,33 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family:"bYekan";
+    /* font-weight: 400; */
+    src:  url("font/bYekan.eot") format("eot"),
+     url("font/bYekan.eot?#iefix") format("embedded-opentype"),
+      url("font/bYekan.otf") format("otf"),
+      url("font/bYekan.woff2") format("woff2"),
+      url("font/bYekan.woff") format("woff"),
+      url("font/bYekan.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "tahoma";
+    src: url("font/Tahoma.eot") format("eot");
+    src: url("font/Tahoma.eot?#iefix") format("embedded-opentype"),
+      url("font/Tahoma.otf") format("otf"),
+      url("font/Tahoma.woff2") format("woff2"),
+      url("font/Tahoma.woff2") format("woff"),
+      url("font/Tahoma.ttf") format("truetype");
+  }
+  html {
+    font-family: "bYekan";
+   
+  }
+  input {
+    font-family: tahoma;
+  }
+}
+
 
 @layer components {
   .select {
-    @apply bg-blue-100 py-4 my-2 flex justify-center
+    @apply bg-blue-100 py-4 my-2 flex justify-center text-slate-800 font-extrabold
   }
   .unselect {
-    @apply bg-none py-4 my-2 flex justify-center
+    @apply bg-none py-4 my-2 flex justify-center text-white font-extrabold
   }
+  .paginationBttns {
+    @apply w-[100%] h-[40px] flex flex-row-reverse justify-center rounded-lg
+  }
+  .paginationBttns a {
+    @apply px-[15px] py-[10px] m-[8px] rounded-md border  cursor-pointer shadow-sm 
+     text-slate-800 font-extrabold
+    hover:text-white hover:bg-blue-300
+   }
+   .paginationActive a {
+    @apply text-white bg-slate-800   rounded-md
+   }
+   .paginationDisabled a {
+    @apply  bg-gray-200 text-white rounded-lg
+   }
 }
+
+
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ 
   direction: rtl;
-  font-family: vazir;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
 
 input {
-  border: none;
+  /* border: none; */
   outline: none;
 }
